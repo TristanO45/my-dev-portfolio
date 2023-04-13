@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BsXDiamondFill } from "react-icons/bs";
-import { IconContext } from "react-icons";
+import { sidebarMenu } from "../data/data";
 
 export default function SideNavbar() {
   // let iconStyles = { color: }
