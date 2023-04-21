@@ -22,12 +22,12 @@ const sidebarMenu = [
     {
         text: 'Projects',
         icon: <AiFillProject className="text-[#5fefd0]" />,
-        url: '/about'
+        url: '/projects'
     },
     {
         text: 'Contact',
         icon: <MdOutlineContactMail className="text-[#5fefd0]" />,
-        url: '/about'
+        url: '/contact'
     }
 ]
 
