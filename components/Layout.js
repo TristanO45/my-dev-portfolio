@@ -1,6 +1,8 @@
 import React from "react";
 import SideNavbar from "./SideNavbar";
 import Home from "./Home";
+import About from "./About"
+import Projects from "./Projects"
 
 function Layout({ children }) {
   return (
@@ -9,7 +11,9 @@ function Layout({ children }) {
       <SideNavbar />
       <div className="flex-1 bg-[#121212]">
       <Home />
+      <About />
       </div>
+      
       
       
       

@@ -5,6 +5,7 @@ import React from "react";
 import { BsXDiamondFill, BsFillPersonVcardFill } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai"
 import { MdOutlineContactMail } from "react-icons/md"
+import { GrLinkedin, GrGithub, GrInstagram } from "react-icons/gr"
 
 // sidebar menu
 
@@ -31,4 +32,24 @@ const sidebarMenu = [
     }
 ]
 
-export { sidebarMenu }
+// Social Media Icons
+
+const socialIcons = [
+    {
+        icon: <GrLinkedin className="text-[#5fefd0]"/>,
+        url: "https://www.linkedin.com/in/tristan-onfroy/"
+
+},
+{
+    icon: <GrGithub className="text-[#5fefd0]"/>,
+    url: "https://github.com/TristanO45"
+
+},
+{
+    icon: <GrInstagram className="text-[#5fefd0]"/>,
+    url: "https://www.instagram.com/tristan.vision/"
+
+}
+]
+
+export { sidebarMenu, socialIcons }
