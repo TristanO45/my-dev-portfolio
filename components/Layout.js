@@ -1,26 +1,19 @@
 import React from "react";
 import SideNavbar from "./SideNavbar";
-import Home from "./Home";
-import About from "./About"
-import Projects from "./Projects"
+import Home from "../pages/home";
+import About from "../pages/about";
+import Projects from "../pages/projects";
 
 function Layout({ children }) {
   return (
-    
-    <div className="h-screen flex flex-row justify-start">
+    <div className="h-screen flex flex-row justify-start bg-[#121212]">
       <SideNavbar />
-      <div className="flex-1 bg-[#121212]">
+
       <Home />
       <About />
-      </div>
-      
-      
-      
-      
 
       {children}
     </div>
-    
   );
 }
 
