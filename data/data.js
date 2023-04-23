@@ -3,53 +3,52 @@ import React from "react";
 // react-icons
 
 import { BsXDiamondFill, BsFillPersonVcardFill } from "react-icons/bs";
-import { AiFillProject } from "react-icons/ai"
-import { MdOutlineContactMail } from "react-icons/md"
-import { GrLinkedin, GrGithub, GrInstagram } from "react-icons/gr"
+import { AiFillProject } from "react-icons/ai";
+import { MdOutlineContactMail } from "react-icons/md";
+import { GrLinkedin, GrGithub, GrInstagram } from "react-icons/gr";
 
 // sidebar menu
 
 const sidebarMenu = [
-    {
-        text: 'Home',
-        icon: <BsXDiamondFill className="text-[#5fefd0]" />,
-        url: '/'
-    },
-    {
-        text: 'About',
-        icon: <BsFillPersonVcardFill className="text-[#5fefd0]" />,
-        url: '/about'
-    },
-    {
-        text: 'Projects',
-        icon: <AiFillProject className="text-[#5fefd0]" />,
-        url: '/projects'
-    },
-    {
-        text: 'Contact',
-        icon: <MdOutlineContactMail className="text-[#5fefd0]" />,
-        url: '/contact'
-    }
-]
+  {
+    text: "Home",
+    icon: <BsXDiamondFill className="text-[#5fefd0] inline-block" />,
+    url: "/",
+  },
+  {
+    text: "About",
+    icon: (
+      <BsFillPersonVcardFill className="text-[#5fefd0] inline-block" />
+    ),
+    url: "/about",
+  },
+  {
+    text: "Projects",
+    icon: <AiFillProject className="text-[#5fefd0]  inline-block" />,
+    url: "/projects",
+  },
+  {
+    text: "Contact",
+    icon: <MdOutlineContactMail className="text-[#5fefd0] inline-block" />,
+    url: "/contact",
+  },
+];
 
 // Social Media Icons
 
 const socialIcons = [
-    {
-        icon: <GrLinkedin className="text-[#5fefd0]"/>,
-        url: "https://www.linkedin.com/in/tristan-onfroy/"
+  {
+    icon: <GrLinkedin className="text-[#5fefd0]" />,
+    url: "https://www.linkedin.com/in/tristan-onfroy/",
+  },
+  {
+    icon: <GrGithub className="text-[#5fefd0]" />,
+    url: "https://github.com/TristanO45",
+  },
+  {
+    icon: <GrInstagram className="text-[#5fefd0]" />,
+    url: "https://www.instagram.com/tristan.vision/",
+  },
+];
 
-},
-{
-    icon: <GrGithub className="text-[#5fefd0]"/>,
-    url: "https://github.com/TristanO45"
-
-},
-{
-    icon: <GrInstagram className="text-[#5fefd0]"/>,
-    url: "https://www.instagram.com/tristan.vision/"
-
-}
-]
-
-export { sidebarMenu, socialIcons }
+export { sidebarMenu, socialIcons };

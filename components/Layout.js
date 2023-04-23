@@ -6,9 +6,8 @@ import Projects from "../pages/projects";
 
 function Layout({ children }) {
   return (
-    <div className="h-screen flex flex-row justify-start bg-[#121212]">
+    <div className="flex  bg-[#121212]">
       <SideNavbar />
-
       <Home />
       <About />
 
