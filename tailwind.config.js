@@ -6,7 +6,23 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        typing: "typing 3s steps(8)",
+      },
+      keyframes: {
+        typing: {
+          from: { width: "0" },
+          to: { width: "7ch" },
+        },
+      },
+      fontFamily: {
+        moulFont: ["Moul"],
+        serifFont: ["Noto Serif Kannada"],
+      },
+    },
+    plugins: [],
   },
-  plugins: [],
 };
+
+// infinite alternate both <-- try for the typing text animation

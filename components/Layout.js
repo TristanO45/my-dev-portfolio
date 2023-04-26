@@ -9,7 +9,6 @@ function Layout({ children }) {
     <div className="flex  bg-[#121212]">
       <SideNavbar />
       <Home />
-      <About />
 
       {children}
     </div>
