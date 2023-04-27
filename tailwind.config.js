@@ -7,15 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        typing: "typing 3s steps(8)",
-      },
-      keyframes: {
-        typing: {
-          from: { width: "0" },
-          to: { width: "7ch" },
-        },
-      },
       fontFamily: {
         moulFont: ["Moul"],
         serifFont: ["Noto Serif Kannada"],

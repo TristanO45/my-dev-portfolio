@@ -1,13 +1,22 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 
 function Home() {
   return (
-    <div>
-      <header className="mt-10">
-        <h1 className="text-[#57e0c3] pt-10 text-8xl font-serifFont">
-          Hi, <br /> I'm <br />
-          <span className="inline-block pt-5 overflow-hidden whitespace-nowrap animate-typing">
-             Tristan{" "}
+    <div className="flex items-center">
+      <header className=" ">
+        <h1 className="text-white align-bottom  pt-10 text-8xl font-serifFont">
+          Hi, <br /> I'm&nbsp;
+          <span className="inline-block text-[#57e0c3]">
+            <Typewriter
+              options={{
+                strings: ["Tristan"],
+                autoStart: true,
+                loop: true,
+                delay: 350,
+                cursorClassName: "white",
+              }}
+            />{" "}
           </span>
         </h1>
       </header>
