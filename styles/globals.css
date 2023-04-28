@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.contact-button {
+    @apply relative
+  }
+  .contact-button::after{
+    @apply content-[''] bg-[#57e0c3] h-[100%] w-[0%] rounded-l absolute duration-300
+  }
+  .contact-button:hover::after{
+    @apply w-[100%] 
+  }
 
 
 
