@@ -17,9 +17,7 @@ const sidebarMenu = [
   },
   {
     text: "About",
-    icon: (
-      <BsFillPersonVcardFill className="text-[#5fefd0] inline-block" />
-    ),
+    icon: <BsFillPersonVcardFill className="text-[#5fefd0] inline-block" />,
     url: "/about",
   },
   {
@@ -50,5 +48,9 @@ const socialIcons = [
     url: "https://www.instagram.com/tristan.vision/",
   },
 ];
+
+// Tech Stack icons
+
+const techStack = {};
 
 export { sidebarMenu, socialIcons };

@@ -6,13 +6,14 @@ import Projects from "../pages/projects";
 
 function Layout({ children }) {
   return (
-    <div className="flex">
+    <div className="relative">
       <SideNavbar />
-      <section className="flex flex-col flex-1">
+      <div className="flex flex-col pl-[210px] bg-[#121212]">
         <Header />
         <About />
         {children}
-      </section>
+      </div>
+      
     </div>
   );
 }
