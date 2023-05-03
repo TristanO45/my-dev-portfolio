@@ -6,9 +6,9 @@ import Projects from "../pages/projects";
 
 function Layout({ children }) {
   return (
-    <div className="relative">
+    <div className="bg-[#121212]">
       <SideNavbar />
-      <div className="flex flex-col pl-[210px] bg-[#121212]">
+      <div className="flex flex-1 flex-col ml-[200px]">
         <Header />
         <About />
         {children}

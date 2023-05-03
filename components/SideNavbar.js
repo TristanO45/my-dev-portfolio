@@ -9,8 +9,8 @@ export default function SideNavbar() {
   // useRouter hook will be used for navigating each page
   const router = useRouter();
   return (
-    <aside className="px-4 w-50 h-screen fixed flex flex-col  justify-between bg-[#141515]">
-      <div className=" w-auto">
+    <aside className="px-4 w-[175px] h-screen fixed flex flex-col justify-between bg-[#141515]">
+      <div className="w-auto">
         <Image
           src={"/PortfolioHS.jpg"}
           alt="Headshot"
