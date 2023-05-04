@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Contact() {
+function Contact(props) {
   return (
-    <div className="text-white">Contact</div>
+    <div className="text-white" id={props.id}>Contact</div>
   )
 }
 

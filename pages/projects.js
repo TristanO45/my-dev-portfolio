@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Projects() {
+function Projects(props) {
   return (
-    <div className="text-white">Projects</div>
+    <div className="text-white" id={props.id}>Projects</div>
   )
 }
 

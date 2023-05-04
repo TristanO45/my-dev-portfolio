@@ -25,18 +25,25 @@ export default function SideNavbar() {
               const { text, url, icon } = link;
               return (
                 <li key={index}>
-                  <Link
-                    
-                    href={url}
-                    className={`${
-                      router.asPath === url
-                        ? "text-[#5fefd0]"
-                        : "text-[#9d9d9d]"
-                    }`}
+                  <label
+                    onClick={(e) => {
+                      const target = document.querySelector(
+                        `#${text.toLowerCase()}`
+                      );
+                      console.log(target);
+                      target.scrollIntoView();
+                    }}
+                    // href={url}
+                    // className={`${
+                    //   d
+                    //   // router.asPath === url
+                    //   //   ? "text-[#5fefd0]"
+                    //   //   : "text-[#9d9d9d]"
+                    // }`}
                   >
                     {icon}
                     <p className="inline-block ml-4">{text}</p>
-                  </Link>
+                  </label>
                 </li>
               );
             })}

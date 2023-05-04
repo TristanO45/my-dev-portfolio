@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
 
-function Header() {
+function Header(props) {
   return (
-    <section className="flex h-screen items-center">
+    <section className="flex h-screen items-center" id={props.id}>
       <header>
         <h1 className="text-white align-bottom text-8xl font-serifFont">
           Hi, <br /> I'm&nbsp; 
