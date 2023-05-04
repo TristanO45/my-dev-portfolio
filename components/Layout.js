@@ -10,10 +10,9 @@ function Layout({ children }) {
       <SideNavbar />
       <div className="flex flex-1 flex-col ml-[200px]">
         <Header />
-        <About />
+        <About id="content"/>
         {children}
       </div>
-      
     </div>
   );
 }

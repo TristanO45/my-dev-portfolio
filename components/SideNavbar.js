@@ -26,6 +26,7 @@ export default function SideNavbar() {
               return (
                 <li key={index}>
                   <Link
+                    
                     href={url}
                     className={`${
                       router.asPath === url
