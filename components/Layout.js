@@ -10,10 +10,10 @@ function Layout({ children }) {
     <div className="bg-[#121212]">
       <SideNavbar />
       <div className="flex flex-1 flex-col ml-[200px]">
-        <Header id="home"/>
-        <About id="about"/>
-        <Projects id="projects"/>
-        <Contact id="contact"/>
+        <Header id="home" />
+        <About id="about" />
+        <Projects id="projects" />
+        <Contact id="contact" />
         {children}
       </div>
     </div>

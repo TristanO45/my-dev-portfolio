@@ -7,7 +7,7 @@ function Homepage() {
   return (
     <>
       <Head>
-        <title>'Welcome to Next.js!'</title>
+        <title>'Tristan Onfroy'</title>
         <meta name="description" content="Manually created Nextjs App" />
         <link rel="icon" href="/pro.ico" />
       </Head>

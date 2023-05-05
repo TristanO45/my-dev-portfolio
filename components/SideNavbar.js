@@ -10,6 +10,7 @@ export default function SideNavbar() {
   // useRouter hook will be used for navigating each page
   const router = useRouter();
 
+  // Using this to update the state of the sidebar link color state
   const [colorChange, setColorChange] = useState("Home");
   return (
     <aside className="px-4 w-[175px] h-screen fixed flex flex-col justify-between bg-[#141515]">
@@ -29,9 +30,11 @@ export default function SideNavbar() {
               return (
                 <li key={index}>
                   <label
+                    // This is where we're updating the state of the link color based on clicks
                     className={`cursor-pointer ${
                       colorChange === text ? "text-[#5fefd0]" : "text-[#9d9d9d]"
                     }`}
+                    // this on click is checking if one of the sidebar links has been clicked.
                     onClick={(e) => {
                       const target = document.querySelector(
                         `#${text.toLowerCase()}`

@@ -6,6 +6,7 @@ import { BsXDiamondFill, BsFillPersonVcardFill } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai";
 import { MdOutlineContactMail } from "react-icons/md";
 import { GrLinkedin, GrGithub, GrInstagram } from "react-icons/gr";
+import { SiJavascript, SiTypescript, SiReact, SiRedux } from "react-icons/si";
 
 // sidebar menu
 
@@ -51,6 +52,27 @@ const socialIcons = [
 
 // Tech Stack icons
 
-const techStack = {};
+const techStack = [
+  {
+    icon: <SiJavascript className="text-[#5fefd0]" />,
+    text: "Javascript",
+    url: "temp",
+  },
+  {
+    icon: <SiTypescript className="text-[#5fefd0]" />,
+    text: "Typescript",
+    url: "temp",
+  },
+  {
+    icon: <SiReact className="text-[#5fefd0]" />,
+    text: "React",
+    url: "temp",
+  },
+  {
+    icon: <SiRedux className="text-[#5fefd0]" />,
+    text: "Redux",
+    url: "temp",
+  },
+];
 
-export { sidebarMenu, socialIcons };
+export { sidebarMenu, socialIcons, techStack };
