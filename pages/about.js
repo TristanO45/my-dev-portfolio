@@ -4,7 +4,7 @@ function About(props) {
   return (
     <section className=" h-[1000px] pt-[10vh]" id={props.id}>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">About & Skills</h1>
-      <p className="text-white text-xl pt-8 w-[900px]">I have always been the self-proclaimed tech geek amongst my peers and family. My love for technology really took root when I teamed up with some gaming buddies to create a few 8-bit games. My contribution? The stunningly beautiful backgrounds and layouts that really made our games pop.
+      <p className="text-white text-xl pt-8 w-[900px]">I've always been the self-proclaimed tech geek amongst my peers and family. My love for technology really took root when I teamed up with some gaming buddies to create 8-bit games. My contribution? The stunningly beautiful backgrounds and layouts that really made our games pop.
       <br />
       <br />
       As I continued my journey to become a programming wizard, I had the privilege of working alongside some of the most talented engineers in the business. Together, we tackled challenging projects that have left me feeling like I'm capable of making a real difference in the world.
