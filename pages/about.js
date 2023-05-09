@@ -43,13 +43,16 @@ function About(props) {
           </button>
         </a>
       </div>
-      <dev className="grid grid-cols-4 gap-x-1 gap-y-4 mt-20 ">
+      <dev className="grid grid-cols-5 gap-y-4 mt-20 ">
         {techStack.map((link, index) => {
           const { icon, text, url } = link;
           return (
-            <div className="flex flex-col rounded-xl shadow-2x border-2 w-[200px] h-[100px] justify-center items-center space-y-1">
+            <div className="shadow-2x   justify-center items-center space-y-1 skillCardColor">
               {icon}
-              <p className="text-white">{text}</p>
+
+              <p className="text-white z-10 font-semibold tracking-wide">
+                {text}
+              </p>
             </div>
           );
         })}

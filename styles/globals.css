@@ -4,17 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.contact-button {
-    @apply relative
+.undrLine {
+  @apply relative;
+}
+.contact-button::after {
+  @apply content-[''] bg-[#57e0c3] h-[100%] w-[0%] rounded-l absolute duration-300;
+}
+.contact-button:hover::after {
+  @apply w-[100%];
+}
+
+@layer utilities {
+  .skillCardColor {
+    @apply bg-inherit w-[250px] h-[100px] text-[#57e0c3] hover:text-white duration-700 flex flex-col relative;
   }
-  .contact-button::after{
-    @apply content-[''] bg-[#57e0c3] h-[100%] w-[0%] rounded-l absolute duration-300
+
+  .skillCardColor::before {
+    @apply content-[''] absolute w-[100%] h-[100%] bg-[#57e0c3] top-0 left-0 scale-x-0 rounded-xl transition-transform ease-in-out origin-right duration-700;
   }
-  .contact-button:hover::after{
-    @apply w-[100%] 
+  .skillCardColor:hover::before {
+    @apply scale-x-100 origin-left;
   }
+
+}
+
+@layer utilities {
+  
+}
 
 html {
   scroll-behavior: smooth;
 }
-
