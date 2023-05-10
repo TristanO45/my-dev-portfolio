@@ -20,16 +20,14 @@
   }
 
   .skillCardColor::before {
-    @apply content-[''] absolute w-[100%] h-[100%] bg-[#57e0c3] top-0 left-0 scale-x-0 rounded-xl transition-transform ease-in-out origin-right duration-700;
+    @apply content-[''] absolute w-[100%] h-[100%] bg-[#57e0c3] top-0 left-0 scale-x-0 rounded-xl transition-transform ease-in-out origin-right duration-500;
   }
   .skillCardColor:hover::before {
     @apply scale-x-100 origin-left;
   }
-
 }
 
 @layer utilities {
-  
 }
 
 html {

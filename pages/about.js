@@ -3,7 +3,7 @@ import { techStack } from "../data/data";
 
 function About(props) {
   return (
-    <section className="overflow-hidden h-[1400px]  pt-[10vh]" id={props.id}>
+    <section className="h-[1400px]  pt-[10vh]" id={props.id}>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">About & Skills</h1>
       <p className="text-white text-xl pt-8 w-[900px]">
         I've always been the self-proclaimed tech geek amongst my peers and
@@ -47,7 +47,10 @@ function About(props) {
         {techStack.map((link, index) => {
           const { icon, text, url } = link;
           return (
-            <div className="shadow-2x   justify-center items-center space-y-1 skillCardColor">
+            <div
+              className="shadow-2x   justify-center items-center space-y-1 skillCardColor"
+              key={index}
+            >
               {icon}
 
               <p className="text-white z-10 font-semibold tracking-wide">

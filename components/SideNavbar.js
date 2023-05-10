@@ -39,7 +39,6 @@ export default function SideNavbar() {
                       const target = document.querySelector(
                         `#${text.toLowerCase()}`
                       );
-                      console.log(target);
                       if (target) {
                         setColorChange(text);
                         target.scrollIntoView();

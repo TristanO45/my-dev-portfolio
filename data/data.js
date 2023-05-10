@@ -72,6 +72,34 @@ const socialIcons = [
   },
 ];
 
+// Projects
+
+const projectCards = [
+  {
+    title: "ParQ",
+    desc: "A service for hosting/booking parking spaced",
+    stack:
+      "Javascript, React, CSS, MUI, Node, Express, Jest, MongoDB, Google Maps API",
+    gitHubUrl: "",
+    imgUrl: "Parq.png",
+  },
+  {
+    title: "HomeGrub",
+    desc: "Online marketplace to order homemade meals",
+    stack:
+      "Javascript, React, CSS, MUI, Node, Express, Cypress.io, PostgreSQL, Stripe API",
+    gitHubUrl: "",
+    imgUrl: "HomeGrub.png",
+  },
+  {
+    title: "MeetMe",
+    desc: "Application for joining/creating meetups",
+    stack: "Javascript, React, CSS, Node, Express, SQL",
+    gitHubUrl: "",
+    imgUrl: "MeetMe.png",
+  },
+];
+
 // Tech Stack icons
 
 const techStack = [
@@ -177,4 +205,4 @@ const techStack = [
   },
 ];
 
-export { sidebarMenu, socialIcons, techStack };
+export { sidebarMenu, socialIcons, techStack, projectCards };
