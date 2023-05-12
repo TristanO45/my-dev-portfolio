@@ -76,12 +76,20 @@ const socialIcons = [
 
 const projectCards = [
   {
+    title: "SurfQL",
+    desc: "VS Code developer tool that displays user defined GraphQL schema in a visualizer and allows for autocompletion for your query using Intellisense.",
+    stack:
+      "Javascript, Typescript, Bootstrap V5.0, React, CSS, VSCode Extension API,",
+    gitHubUrl: "",
+    imgUrl: "/Surfql-logo (1).jpg",
+  },
+  {
     title: "ParQ",
     desc: "A service for hosting/booking parking spaced",
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Jest, MongoDB, Google Maps API",
     gitHubUrl: "",
-    imgUrl: "Parq.png",
+    imgUrl: "/Parq.png",
   },
   {
     title: "HomeGrub",
@@ -89,14 +97,14 @@ const projectCards = [
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Cypress.io, PostgreSQL, Stripe API",
     gitHubUrl: "",
-    imgUrl: "HomeGrub.png",
+    imgUrl: "/HomeGrub.png",
   },
   {
     title: "MeetMe",
     desc: "Application for joining/creating meetups",
     stack: "Javascript, React, CSS, Node, Express, SQL",
     gitHubUrl: "",
-    imgUrl: "MeetMe.png",
+    imgUrl: "/MeetMe.png",
   },
 ];
 
