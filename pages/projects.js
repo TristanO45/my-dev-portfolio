@@ -4,14 +4,14 @@ import { projectCards } from "../data/data";
 
 function Projects(props) {
   return (
-    <section className="h-[1400px] pt-[10vh]" id={props.id}>
+    <section className="h-[75rem] pt-[10vh]" id={props.id}>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">Projects</h1>
       <div className="flex items-center justify-center pt-[150px]">
         <div className="grid grid-cols-2 gap-2">
           {projectCards.map((items, index) => {
             const { title, desc, stack, gitHubUrl, imgUrl } = items;
             return (
-              <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 ">
+              <div key={index} className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 ">
                 <div className="object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125">
                   <Image
                     src={imgUrl}
