@@ -1,10 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import { techStack } from "../data/data";
 
 function About(props) {
   return (
     <section className="h-[1400px]  pt-[10vh]" id={props.id}>
-      <h1 className="text-6xl text-[#57e0c3] font-serifFont">About & Skills</h1>
+      
+      <img
+          className="absolute opacity-40 mix-blend-overlay right-0 -my-40 "
+          src={"/About.png"}
+          alt="logo"
+          width={1000}
+          height={1000}
+        />
+      <h1 className="text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
       <p className="text-white text-xl pt-8 w-[900px]">
         I've always been the self-proclaimed tech geek amongst my peers and
         family. My love for technology really took root when I teamed up with
@@ -29,6 +38,7 @@ function About(props) {
         <br />
         Here's my resume for more details about my experience.
       </p>
+      
       <div className="pt-8">
         <a href={"/myResume.pdf"} download="Tristan Onfroy Resume">
           <button className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group">

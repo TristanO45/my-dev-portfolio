@@ -1,10 +1,18 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Typewriter from "typewriter-effect";
 
 function Header(props) {
   return (
     <section className="flex h-screen items-center" id={props.id}>
+      <Image
+          className="absolute right-3 object-cover opacity-40"
+          src={"/logoShape.png"}
+          alt="logo"
+          width={750}
+          height={750}
+        />
       <header>
         <h1 className="text-white align-bottom text-8xl font-serifFont">
           Hi, <br /> I'm&nbsp;
@@ -37,6 +45,7 @@ function Header(props) {
             </button>
           </Link>
         </div>
+        
       </header>
     </section>
   );

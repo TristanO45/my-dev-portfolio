@@ -5,8 +5,15 @@ import { projectCards } from "../data/data";
 function Projects(props) {
   return (
     <section className="h-[75rem] pt-[10vh]" id={props.id}>
+      <img
+          className="absolute opacity-40 mix-blend-overlay right-0 -my-28 "
+          src={"/Projects.png"}
+          alt="logo"
+          width={1000}
+          height={1000}
+        />
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">Projects</h1>
-      <div className="flex items-center justify-center pt-[150px]">
+      <div className="flex items-center justify-center pt-[130px]">
         <div className="grid grid-cols-2 gap-6">
           {projectCards.map((items, index) => {
             const { title, desc, stack, gitHubUrl, imgUrl } = items;

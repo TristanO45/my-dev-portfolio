@@ -24,35 +24,34 @@ function Contact(props) {
 
     if (isValidForm) {
       setButtonText("Sending");
-    
 
-    const res = await fetch("/api/sendgrid", {
-      body: JSON.stringify({
-        email: email,
-        fullname: fullname,
-        subject: subject,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+  console.log(email, fullname, subject, message)
+      const { error } = await res.json();
+      if (error) {
+        console.log('This is the error I get =>', error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send Message");
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      setShowSuccessMessage(false);
-      setShowFailureMessage(true);
-      setButtonText("Send Message");
-
-      setFullname("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
-      return;
-    }
-    setShowSuccessMessage(true);
+        setFullname("");
+        setEmail("");
+        setMessage("");
+        setSubject("");
+        return;
+      }
+      setShowSuccessMessage(true);
       setShowFailureMessage(false);
       setButtonText("Send");
       // Reset form fields
@@ -60,9 +59,9 @@ function Contact(props) {
       setEmail("");
       setMessage("");
       setSubject("");
+    }
+    
   };
-  console.log(fullname, email, subject, message);
-}
 
   const handleValidation = () => {
     let tempErrors = {};
@@ -92,7 +91,7 @@ function Contact(props) {
 
   return (
     <section className="h-[1400px] pt-[10vh]" id={props.id}>
-      <h1 className=" text-6xl text-[#57e0c3] font-serifFont">Contact Me</h1>
+      <h1 className="pb-[2rem] text-6xl text-[#57e0c3] font-serifFont">Contact Me</h1>
       <form onSubmit={handleSubmit} className="absolute">
         <div className="pb-5 space-x-4 relative">
           <input
@@ -154,7 +153,10 @@ function Contact(props) {
           />
         </div>
         <div className="mt-5">
-          <button type="submit" className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group">
+          <button
+            type="submit"
+            className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group"
+          >
             <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
             <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
             <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
@@ -166,17 +168,17 @@ function Contact(props) {
           </button>
         </div>
         <div className="text-left">
-            {showSuccessMessage && (
-              <p className="text-green-500 font-semibold text-sm my-2">
-                Thankyou! Your Message has been delivered.
-              </p>
-            )}
-            {showFailureMessage && (
-              <p className="text-red-500">
-                Oops! Something went wrong, please try again.
-              </p>
-            )}
-          </div>
+          {showSuccessMessage && (
+            <p className="text-green-500 font-semibold text-sm my-2">
+              Thankyou! Your Message has been delivered.
+            </p>
+          )}
+          {showFailureMessage && (
+            <p className="text-red-500">
+              Oops! Something went wrong, please try again.
+            </p>
+          )}
+        </div>
       </form>
     </section>
   );
