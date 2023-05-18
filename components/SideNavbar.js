@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -8,6 +9,9 @@ import { sidebarMenu, socialIcons } from "../data/data";
 export default function SideNavbar() {
   // useRouter hook will be used for navigating each page
   const router = useRouter();
+
+  // Using this to update the state of the sidebar link color state
+  const [colorChange, setColorChange] = useState("Home");
   return (
     <aside className="px-4 w-[175px] h-screen fixed flex flex-col justify-between bg-[#141515]">
       <div className="w-auto">
@@ -20,23 +24,30 @@ export default function SideNavbar() {
       </div>
       <nav>
         <div className="inline-block">
-          <ul className="space-y-3 ml-2">
+          <ul className="space-y-3 ml-2 ">
             {sidebarMenu.map((link, index) => {
               const { text, url, icon } = link;
               return (
                 <li key={index}>
-                  <Link
-                    
-                    href={url}
-                    className={`${
-                      router.asPath === url
-                        ? "text-[#5fefd0]"
-                        : "text-[#9d9d9d]"
+                  <label
+                    // This is where we're updating the state of the link color based on clicks
+                    className={`cursor-pointer ${
+                      colorChange === text ? "text-[#5fefd0]" : "text-[#9d9d9d]"
                     }`}
+                    // this on click is checking if one of the sidebar links has been clicked.
+                    onClick={(e) => {
+                      const target = document.querySelector(
+                        `#${text.toLowerCase()}`
+                      );
+                      if (target) {
+                        setColorChange(text);
+                        target.scrollIntoView();
+                      }
+                    }}
                   >
                     {icon}
                     <p className="inline-block ml-4">{text}</p>
-                  </Link>
+                  </label>
                 </li>
               );
             })}
