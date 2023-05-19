@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { projectCards } from "../data/data";
+import Fade from "react-reveal/Fade";
+
 
 function Projects(props) {
   return (
@@ -12,6 +14,7 @@ function Projects(props) {
           width={1000}
           height={1000}
         />
+        <Fade left>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">Projects</h1>
       <div className="flex items-center justify-center pt-[130px]">
         <div className="grid grid-cols-2 gap-6">
@@ -48,6 +51,7 @@ function Projects(props) {
           })}
         </div>
       </div>
+      </Fade>
     </section>
   );
 }
