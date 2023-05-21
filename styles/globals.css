@@ -16,7 +16,7 @@
 
 @layer utilities {
   .skillCardColor {
-    @apply bg-inherit w-[250px] h-[100px] text-[#57e0c3] hover:text-white duration-700 flex flex-col relative;
+    @apply bg-inherit w-[100%] h-[100px] text-[#57e0c3] hover:text-white duration-700 flex flex-col relative;
   }
 
   .skillCardColor::before {

@@ -91,14 +91,14 @@ function Contact(props) {
   };
 
   return (
-    <section className="h-[1400px] pt-[10vh]" id={props.id}>
+    <section className="md:h-[1000px] pt-[10vh]" id={props.id}>
       <Fade left>
         <h1 className="pb-[2rem] text-6xl text-[#57e0c3] font-serifFont">
           Contact Me
         </h1>
-        <div className="flex flex-row space-x-36">
-          <form onSubmit={handleSubmit} className="">
-            <div className="pb-5 space-x-4 relative">
+        <div className="flex flex-col md:flex-row space-x-0 md:space-x-36">
+          <form onSubmit={handleSubmit} className="flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5">
               <input
                 type="text"
                 name="fullname"
@@ -160,7 +160,7 @@ function Contact(props) {
             <div className="mt-5">
               <button
                 type="submit"
-                className="absolute overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group"
+                className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group "
               >
                 <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
                 <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
@@ -174,24 +174,26 @@ function Contact(props) {
             </div>
             <div className="text-left">
               {showSuccessMessage && (
-                <p className="text-green-500 font-semibold text-sm my-2">
+                <p className="text-green-500 font-semibold text-sm md:text-base my-2">
                   Thankyou! Your Message has been delivered.
                 </p>
               )}
               {showFailureMessage && (
-                <p className="text-red-500">
+                <p className="text-red-500 md:text-base">
                   Oops! Something went wrong, please try again.
                 </p>
               )}
             </div>
           </form>
-
+<div className="mt-8 md:mt-0">
           <Image
             src="/ContactMePic.png"
             alt="contact pic"
-            width="500"
-            height="500"
+            width={500}
+            height={500}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
           />
+          </div>
         </div>
       </Fade>
     </section>

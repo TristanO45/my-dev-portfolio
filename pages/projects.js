@@ -17,7 +17,7 @@ function Projects(props) {
         <Fade left>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont">Projects</h1>
       <div className="flex items-center justify-center pt-[130px]">
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2  gap-6">
           {projectCards.map((items, index) => {
             const { title, desc, stack, gitHubUrl, imgUrl } = items;
             return (

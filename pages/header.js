@@ -8,11 +8,12 @@ function Header(props) {
   return (
     <section className="flex h-screen items-center" id={props.id}>
       <Image
-        className="absolute right-3 object-cover opacity-40"
+        className="absolute right-3 object-cover opacity-40 hidden md:block"
         src={"/logoShape.png"}
         alt="logo"
         width={750}
         height={750}
+        
       />
       <header>
         <Fade left>

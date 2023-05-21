@@ -13,7 +13,8 @@ export default function SideNavbar() {
   // Using this to update the state of the sidebar link color state
   const [colorChange, setColorChange] = useState("Home");
   return (
-    <aside className="px-4 w-[175px] h-screen fixed flex flex-col justify-between bg-[#141515]">
+    <div className="hidden md:block">
+    <aside className="flex flex-col px-4 w-[175px] h-screen fixed  justify-between bg-[#141515]">
       <div className="w-auto">
         <Image
           src={"/PortfolioHS.jpg"}
@@ -67,5 +68,6 @@ export default function SideNavbar() {
         </ul>
       </div>
     </aside>
+    </div>
   );
 }

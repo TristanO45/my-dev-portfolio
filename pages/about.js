@@ -5,10 +5,10 @@ import Fade from "react-reveal/Fade";
 
 function About(props) {
   return (
-    <section className="h-[1400px]  pt-[10vh]" id={props.id}>
+    <section className="md:h-[1400px]  pt-[10vh]" id={props.id}>
       
       <img
-          className="absolute opacity-40 mix-blend-overlay right-0 -my-40 "
+          className="w-full h-auto md:w-1/2 absolute opacity-40 mix-blend-overlay right-0 -my-40 "
           src={"/About.png"}
           alt="logo"
           width={1000}
@@ -16,7 +16,7 @@ function About(props) {
         />
         <Fade left>
       <h1 className="text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
-      <p className="text-white text-xl pt-8 w-[900px]">
+      <p className="text-white text-xl pt-8 w-full md:w-[75%]">
         I've always been the self-proclaimed tech geek amongst my peers and
         family. My love for technology really took root when I teamed up with
         some gaming buddies to create 8-bit games. My contribution? The
@@ -55,7 +55,7 @@ function About(props) {
           </button>
         </a>
       </div>
-      <dev className="grid grid-cols-5 gap-y-4 mt-20 ">
+      <dev className="grid grid-cols-1 md:grid-cols-5 gap-y-4 mt-20 ">
         {techStack.map((link, index) => {
           const { icon, text, url } = link;
           return (
