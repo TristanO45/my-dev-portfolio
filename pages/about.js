@@ -5,17 +5,17 @@ import Fade from "react-reveal/Fade";
 
 function About(props) {
   return (
-    <section className="h-[230rem] sm:h-[150rem] md:h-[100%] pt-[20vh] sm:pt-[30vh]" id={props.id}>
+    <section className="pt-[20vh] sm:pt-[30vh]" id={props.id}>
       
-      <img
-          className="w-[80%] md:w-1/2 sm:absolute opacity-40 mix-blend-overlay sm:right-0 sm:-my-40 hidden md:block"
+      <Image
+          className="w-[80%] md:w-1/2  sm:absolute opacity-40 mix-blend-overlay sm:right-0 sm:-my-40 hidden md:block"
           src={"/About.png"}
           alt="logo"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
         />
         <Fade left>
-      <h1 className="text-2xl md:text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
+      <h1 className="text-3xl sm:text-4xl md:text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
       <p className="text-white text-lg sm:text-xl px-6 pt-8  md:w-[75%]">
         I've always been the self-proclaimed tech geek amongst my peers and
         family. My love for technology really took root when I teamed up with
@@ -55,12 +55,12 @@ function About(props) {
           </button>
         </a>
       </div>
-      <dev className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-y-4 mt-20 ">
+      <dev className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 justify-items-center gap-y-4 mt-20 ">
         {techStack.map((link, index) => {
           const { icon, text, url } = link;
           return (
             <div
-              className="shadow-2x   justify-center items-center space-y-1 skillCardColor"
+              className="shadow-2x justify-center items-center space-y-1 skillCardColor"
               key={index}
             >
               {icon}

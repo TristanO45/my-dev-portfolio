@@ -77,9 +77,9 @@ const socialIcons = [
 const projectCards = [
   {
     title: "SurfQL",
-    desc: "VS Code developer tool that displays user defined GraphQL schema in a visualizer and allows for autocompletion for your query using Intellisense.",
+    desc: "VS Code developer tool that displays user defined GraphQL schema in a visualizer and allows for autocompletion for your query.",
     stack:
-      "Javascript, Typescript, Bootstrap V5.0, React, CSS, VSCode Extension API,",
+      "Javascript, Typescript, React, CSS, VSCode Extension API",
     gitHubUrl: "",
     imgUrl: "/Surfql-logo (1).jpg",
   },
