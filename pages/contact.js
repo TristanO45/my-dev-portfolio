@@ -97,7 +97,7 @@ function Contact(props) {
           Contact Me
         </h1>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-36">
-          <form onSubmit={handleSubmit} className="flex-1">
+          <form onSubmit={handleSubmit} className="">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5">
               <input
                 type="text"
@@ -191,7 +191,7 @@ function Contact(props) {
             alt="contact pic"
             width={500}
             height={500}
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+            
           />
           </div>
         </div>

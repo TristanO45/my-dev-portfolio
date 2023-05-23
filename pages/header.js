@@ -6,18 +6,20 @@ import Fade from "react-reveal/Fade";
 
 function Header(props) {
   return (
-    <section className="flex h-screen items-center" id={props.id}>
+    <section
+      className="flex h-[50rem] md:h-screen items-center border-2 border-red-500"
+      id={props.id}
+    >
       <Image
         className="absolute right-3 object-cover opacity-40 hidden md:block"
         src={"/logoShape.png"}
         alt="logo"
         width={750}
         height={750}
-        
       />
       <header>
         <Fade left>
-          <h1 className="text-white align-bottom text-8xl font-serifFont">
+          <h1 className="text-white align-bottom text-6xl md:text-8xl font-serifFont">
             Hi, <br /> I'm&nbsp;
             <span className="inline-flex text-[#57e0c3]">
               <Typewriter
@@ -26,7 +28,6 @@ function Header(props) {
                   autoStart: true,
                   loop: true,
                   delay: 100,
-                  cursorClassName: "white",
                 }}
               />{" "}
             </span>
