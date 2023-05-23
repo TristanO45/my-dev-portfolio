@@ -91,7 +91,7 @@ function Contact(props) {
   };
 
   return (
-    <section className="md:h-[1000px] pt-[10vh]" id={props.id}>
+    <section className="h-[50rem] md:h-[1000px] pt-[10vh]" id={props.id}>
       <Fade left>
         <h1 className="pb-[2rem] text-6xl text-[#57e0c3] font-serifFont">
           Contact Me

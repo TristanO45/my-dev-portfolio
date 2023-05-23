@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade";
 
 function Projects(props) {
   return (
-    <section className="h-[75rem] pt-[10vh]" id={props.id}>
+    <section className="h-[50rem] md:h-[75rem] md:pt-[30vh]" id={props.id}>
       <img
           className="absolute opacity-40 mix-blend-overlay right-0 -my-28 "
           src={"/Projects.png"}

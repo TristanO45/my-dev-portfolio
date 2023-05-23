@@ -5,18 +5,18 @@ import Fade from "react-reveal/Fade";
 
 function About(props) {
   return (
-    <section className="md:h-[1400px]  pt-[10vh]" id={props.id}>
+    <section className="h-[230rem] sm:h-[150rem] md:h-[100%] pt-[20vh] sm:pt-[30vh]" id={props.id}>
       
       <img
-          className="w-full h-auto md:w-1/2 absolute opacity-40 mix-blend-overlay right-0 -my-40 "
+          className="w-[80%] md:w-1/2 sm:absolute opacity-40 mix-blend-overlay sm:right-0 sm:-my-40 hidden md:block"
           src={"/About.png"}
           alt="logo"
           width={1000}
           height={1000}
         />
         <Fade left>
-      <h1 className="text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
-      <p className="text-white text-xl pt-8 w-full md:w-[75%]">
+      <h1 className="text-2xl md:text-6xl text-[#57e0c3] font-serifFont ">About & Skills</h1>      
+      <p className="text-white text-lg sm:text-xl px-6 pt-8  md:w-[75%]">
         I've always been the self-proclaimed tech geek amongst my peers and
         family. My love for technology really took root when I teamed up with
         some gaming buddies to create 8-bit games. My contribution? The
@@ -43,7 +43,7 @@ function About(props) {
       
       <div className="pt-8">
         <a href={"/myResume.pdf"} download="Tristan Onfroy Resume">
-          <button className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group">
+          <button className="relative overflow-hidden px-6 sm:px-12 py-2 sm:py-3 text-lg sm:text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group">
             <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
             <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
             <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
@@ -55,7 +55,7 @@ function About(props) {
           </button>
         </a>
       </div>
-      <dev className="grid grid-cols-1 md:grid-cols-5 gap-y-4 mt-20 ">
+      <dev className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-y-4 mt-20 ">
         {techStack.map((link, index) => {
           const { icon, text, url } = link;
           return (
