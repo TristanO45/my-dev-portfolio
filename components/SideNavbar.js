@@ -13,7 +13,7 @@ export default function SideNavbar() {
   // Using this to update the state of the sidebar link color state
   const [colorChange, setColorChange] = useState("Home");
   return (
-    <div className="hidden md:block">
+    <div className="hidden lg:block">
     <aside className="flex flex-col px-4 w-[175px] h-screen fixed  justify-between bg-[#141515]">
       <div className="w-auto">
         <Image
@@ -21,6 +21,7 @@ export default function SideNavbar() {
           alt="Headshot"
           width="150"
           height="150"
+          className="rounded-xl"
         />
       </div>
       <nav>

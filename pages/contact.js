@@ -93,12 +93,12 @@ function Contact(props) {
   return (
     <section className="pt-[10vh] pb-10" id={props.id}>
       <Fade left>
-        <h1 className="pb-[2rem] text-6xl text-[#57e0c3] font-serifFont">
+        <h1 className="pb-[2rem] text-3xl sm:text-4xl md:text-6xl text-[#57e0c3] font-serifFont">
           Contact Me
         </h1>
-        <div className="flex flex-col md:flex-row space-x-0 md:space-x-36">
+        <div className="flex flex-col px-5 md:px-0 md:flex-row space-x-0 md:space-x-36">
           <form onSubmit={handleSubmit} className="">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5 ">
               <input
                 type="text"
                 name="fullname"
@@ -191,7 +191,7 @@ function Contact(props) {
             alt="contact pic"
             width={500}
             height={500}
-            
+            className="rounded-xl"
           />
           </div>
         </div>

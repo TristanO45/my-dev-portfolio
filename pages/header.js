@@ -11,7 +11,7 @@ function Header(props) {
       id={props.id}
     >
       <Image
-        className="absolute right-3 object-cover opacity-40 hidden sm:block" 
+        className="absolute right-3 object-cover opacity-40 hidden sm:block"
         src={"/logoShape.png"}
         alt="logo"
         width={750}
@@ -19,9 +19,9 @@ function Header(props) {
       />
       <header>
         <Fade left>
-          <h1 className="text-white align-bottom text-2xl sm:text-5xl md:text-8xl font-serifFont whitespace-pre-line">
+          <h1 className="text-white align-bottom text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-serifFont">
             Hi, <br /> I'm&nbsp;
-            <span className="inline-flex text-[#57e0c3]">
+            <span className="inline-flex whitespace-pre  text-[#57e0c3]">
               <Typewriter
                 options={{
                   strings: ["Tristan!", "glad you're here!"],
