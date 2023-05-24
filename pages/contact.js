@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { socialIcons } from "../data/data";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
@@ -91,14 +92,14 @@ function Contact(props) {
   };
 
   return (
-    <section className="h-[1400px] pt-[10vh]" id={props.id}>
+    <section className="pt-[10vh] pb-10" id={props.id}>
       <Fade left>
-        <h1 className="pb-[2rem] text-6xl text-[#57e0c3] font-serifFont">
+        <h1 className="pb-[2rem] text-3xl sm:text-4xl md:text-6xl text-[#57e0c3] font-serifFont">
           Contact Me
         </h1>
-        <div className="flex flex-row space-x-36">
-          <form onSubmit={handleSubmit} className="">
-            <div className="pb-5 space-x-4 relative">
+        <div className="flex flex-col px-5 md:px-0 md:flex-row space-x-0 md:space-x-36">
+          <form onSubmit={handleSubmit} >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5">
               <input
                 type="text"
                 name="fullname"
@@ -108,7 +109,7 @@ function Contact(props) {
                   setFullname(e.target.value);
                 }}
                 required
-                className="border-2 rounded-sm bg-transparent border-b py-2 px-4 focus:outline-none focus:rounded-md focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg"
+                className="border-2 rounded-lg bg-transparent border-b py-2 px-4 focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg"
               />
               {errors?.fullname && (
                 <p className="text-red-500">Fullname cannot be empty.</p>
@@ -122,7 +123,7 @@ function Contact(props) {
                   setEmail(e.target.value);
                 }}
                 required
-                className="border-2 rounded-sm bg-transparent border-b py-2 px-4 focus:outline-none focus:rounded-md focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg"
+                className="border-2 rounded-lg bg-transparent border-b py-2 px-4 focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg"
               />
               {errors?.email && (
                 <p className="text-red-500">Email cannot be empty.</p>
@@ -139,7 +140,7 @@ function Contact(props) {
                 }}
                 size="50"
                 required
-                className="border-2 rounded-sm bg-transparent border-b py-2  focus:outline-none focus:rounded-md focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg indent-3"
+                className="border-2 rounded-lg bg-transparent border-b py-2  focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg indent-3"
               />
               {errors?.subject && (
                 <p className="text-red-500">Subject cannot be empty.</p>
@@ -154,13 +155,13 @@ function Contact(props) {
                 }}
                 size="50"
                 required
-                className=" border-2 rounded-sm bg-transparent border-b pb-36  focus:outline-none focus:rounded-md focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg   indent-3"
+                className=" border-2 rounded-lg bg-transparent border-b pb-36  focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg   indent-3"
               />
             </div>
             <div className="mt-5">
               <button
                 type="submit"
-                className="absolute overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group"
+                className="relative overflow-hidden px-12 py-3 text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group "
               >
                 <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
                 <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
@@ -174,24 +175,39 @@ function Contact(props) {
             </div>
             <div className="text-left">
               {showSuccessMessage && (
-                <p className="text-green-500 font-semibold text-sm my-2">
+                <p className="text-green-500 font-semibold text-sm md:text-base my-2">
                   Thankyou! Your Message has been delivered.
                 </p>
               )}
               {showFailureMessage && (
-                <p className="text-red-500">
+                <p className="text-red-500 md:text-base">
                   Oops! Something went wrong, please try again.
                 </p>
               )}
             </div>
           </form>
+          <div className="flex justify-center md:block ml-2 md:justify-end pt-8 md:pt-0 ">
+            <img
+              src="/ContactMePic.png"
+              alt="contact pic"
+              width={500}
+              height={600}
+              className="rounded-xl relative"
+            />
+          </div>
+        </div>
 
-          <Image
-            src="/ContactMePic.png"
-            alt="contact pic"
-            width="500"
-            height="500"
-          />
+        <div>
+          <ul className="flex flex-row justify-center text-2xl lg:text-sm space-x-4 pt-7 ml-4 lg:hidden">
+            {socialIcons.map((icons, index) => {
+              const { icon, url } = icons;
+              return (
+                <a href={url} target="_blank" key={index}>
+                  {icon}
+                </a>
+              );
+            })}
+          </ul>
         </div>
       </Fade>
     </section>

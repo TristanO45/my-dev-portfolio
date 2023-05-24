@@ -10,7 +10,7 @@ function Layout({ children }) {
   return (
     <div className="bg-[#121212]">
       <SideNavbar />
-      <div className="flex flex-1 flex-col ml-[200px] ">
+      <div className="flex justify-center text-center flex-1 flex-col  md:text-justify md:ml-[25px] lg:ml-[200px]  ">
         
         <Header id="home" />
         <About id="about" />

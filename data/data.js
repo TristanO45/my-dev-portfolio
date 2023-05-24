@@ -3,6 +3,7 @@ import React from "react";
 // react-icons
 
 import { BsXDiamondFill, BsFillPersonVcardFill } from "react-icons/bs";
+import { TbWorld } from "react-icons/tb";
 import { AiFillProject } from "react-icons/ai";
 import { MdOutlineContactMail } from "react-icons/md";
 import { GrLinkedin, GrGithub, GrInstagram } from "react-icons/gr";
@@ -28,6 +29,7 @@ import {
   SiMocha,
   SiGithubactions,
   SiTravisci,
+  SiGithub,
 } from "react-icons/si";
 
 // sidebar menu
@@ -59,15 +61,15 @@ const sidebarMenu = [
 
 const socialIcons = [
   {
-    icon: <GrLinkedin className="text-[#5fefd0]" />,
+    icon: <GrLinkedin className="text-[#5fefd0]  " />,
     url: "https://www.linkedin.com/in/tristan-onfroy/",
   },
   {
-    icon: <GrGithub className="text-[#5fefd0]" />,
+    icon: <GrGithub className="text-[#5fefd0] " />,
     url: "https://github.com/TristanO45",
   },
   {
-    icon: <GrInstagram className="text-[#5fefd0]" />,
+    icon: <GrInstagram className="text-[#5fefd0] " />,
     url: "https://www.instagram.com/tristan.vision/",
   },
 ];
@@ -77,10 +79,16 @@ const socialIcons = [
 const projectCards = [
   {
     title: "SurfQL",
-    desc: "VS Code developer tool that displays user defined GraphQL schema in a visualizer and allows for autocompletion for your query using Intellisense.",
-    stack:
-      "Javascript, Typescript, Bootstrap V5.0, React, CSS, VSCode Extension API,",
-    gitHubUrl: "",
+    desc: "VS Code tool: visualize GraphQL schema, autocompletion, query development.",
+    stack: "Javascript, Typescript, React, CSS, VSCode Extension API",
+    gitHubUrl: {
+      url: "https://github.com/oslabs-beta/SurfQL",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "https://surfql.com/",
+      icon: <TbWorld size="2rem" />,
+    },
     imgUrl: "/Surfql-logo (1).jpg",
   },
   {
@@ -88,7 +96,14 @@ const projectCards = [
     desc: "A service for hosting/booking parking spaced",
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Jest, MongoDB, Google Maps API",
-    gitHubUrl: "",
+    gitHubUrl: {
+      url: "https://github.com/GoblinShark-Scratch-Project/parq",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "",
+      icon: "",
+    },
     imgUrl: "/Parq.png",
   },
   {
@@ -96,14 +111,28 @@ const projectCards = [
     desc: "Online marketplace to order homemade meals",
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Cypress.io, PostgreSQL, Stripe API",
-    gitHubUrl: "",
+    gitHubUrl: {
+      url: "https://github.com/Animaniacs-PTRI7/Iteration-project-animaniacs",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "",
+      icon: "",
+    },
     imgUrl: "/HomeGrub.png",
   },
   {
     title: "MeetMe",
-    desc: "Application for joining/creating meetups",
+    desc: "Application for joining and creating meetups",
     stack: "Javascript, React, CSS, Node, Express, SQL",
-    gitHubUrl: "",
+    gitHubUrl: {
+      url: "https://github.com/TristanO45/Meetups",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "",
+      icon: "",
+    },
     imgUrl: "/MeetMe.png",
   },
 ];

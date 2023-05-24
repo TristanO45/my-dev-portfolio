@@ -6,9 +6,12 @@ import Fade from "react-reveal/Fade";
 
 function Header(props) {
   return (
-    <section className="flex h-screen items-center" id={props.id}>
+    <section
+      className="flex h-[40rem] sm:h-screen items-center justify-center md:justify-start"
+      id={props.id}
+    >
       <Image
-        className="absolute right-3 object-cover opacity-40"
+        className="absolute right-3 object-cover opacity-40 hidden sm:block"
         src={"/logoShape.png"}
         alt="logo"
         width={750}
@@ -16,27 +19,26 @@ function Header(props) {
       />
       <header>
         <Fade left>
-          <h1 className="text-white align-bottom text-8xl font-serifFont">
+          <h1 className="text-white align-bottom text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-serifFont">
             Hi, <br /> I'm&nbsp;
-            <span className="inline-flex text-[#57e0c3]">
+            <span className="inline-flex whitespace-pre  text-[#57e0c3]">
               <Typewriter
                 options={{
-                  strings: ["Tristan Onfroy", "Glad You're Here!"],
+                  strings: ["Tristan!", "glad you're here!"],
                   autoStart: true,
                   loop: true,
                   delay: 100,
-                  cursorClassName: "white",
                 }}
               />{" "}
             </span>
           </h1>
-          <p className="text-white text-2xl tracking-wider font-serifFont">
+          <p className="text-white text-md sm:text-lg md:text-xl tracking-wider font-serifFont font-extralight">
             Full Stack Software Engineer
           </p>
           <div className="pt-10">
             {/* <Link href={"#contact"}> */}
             <button
-              className="relative px-12 py-3 overflow-hidden text-2xl font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg shadow-inner group"
+              className="relative px-6 sm:px-12 py-2 sm:py-3 text-lg sm:text-2xl overflow-hidden font-medium text-gray-600 bg-transparent border border-[#57e0c3] rounded-lg group"
               onClick={(e) => {
                 const target = document.querySelector(`#contact`);
                 if (target) {
