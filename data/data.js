@@ -61,15 +61,15 @@ const sidebarMenu = [
 
 const socialIcons = [
   {
-    icon: <GrLinkedin className="text-[#5fefd0]" />,
+    icon: <GrLinkedin className="text-[#5fefd0]  " />,
     url: "https://www.linkedin.com/in/tristan-onfroy/",
   },
   {
-    icon: <GrGithub className="text-[#5fefd0]" />,
+    icon: <GrGithub className="text-[#5fefd0] " />,
     url: "https://github.com/TristanO45",
   },
   {
-    icon: <GrInstagram className="text-[#5fefd0]" />,
+    icon: <GrInstagram className="text-[#5fefd0] " />,
     url: "https://www.instagram.com/tristan.vision/",
   },
 ];
@@ -123,7 +123,7 @@ const projectCards = [
   },
   {
     title: "MeetMe",
-    desc: "Application for joining/creating meetups",
+    desc: "Application for joining and creating meetups",
     stack: "Javascript, React, CSS, Node, Express, SQL",
     gitHubUrl: {
       url: "https://github.com/TristanO45/Meetups",

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { socialIcons } from "../data/data";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
@@ -97,8 +98,8 @@ function Contact(props) {
           Contact Me
         </h1>
         <div className="flex flex-col px-5 md:px-0 md:flex-row space-x-0 md:space-x-36">
-          <form onSubmit={handleSubmit} className="">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5 ">
+          <form onSubmit={handleSubmit} >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5">
               <input
                 type="text"
                 name="fullname"
@@ -185,15 +186,28 @@ function Contact(props) {
               )}
             </div>
           </form>
-<div className="mt-8 md:mt-0">
-          <Image
-            src="/ContactMePic.png"
-            alt="contact pic"
-            width={500}
-            height={500}
-            className="rounded-xl"
-          />
+          <div className="flex justify-center md:block ml-2 md:justify-end pt-8 md:pt-0 ">
+            <img
+              src="/ContactMePic.png"
+              alt="contact pic"
+              width={500}
+              height={600}
+              className="rounded-xl relative"
+            />
           </div>
+        </div>
+
+        <div>
+          <ul className="flex flex-row justify-center text-2xl lg:text-sm space-x-4 pt-7 ml-4 lg:hidden">
+            {socialIcons.map((icons, index) => {
+              const { icon, url } = icons;
+              return (
+                <a href={url} target="_blank" key={index}>
+                  {icon}
+                </a>
+              );
+            })}
+          </ul>
         </div>
       </Fade>
     </section>
