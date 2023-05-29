@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import Header from "./header";
-import About from "./about";
+
+
 
 function Homepage() {
   return (

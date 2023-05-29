@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { socialIcons } from "../data/data";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
@@ -20,7 +21,9 @@ function Contact(props) {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
 
     let isValidForm = handleValidation();
@@ -28,40 +31,37 @@ function Contact(props) {
     if (isValidForm) {
       setButtonText("Sending");
 
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-      console.log(email, fullname, subject, message);
-      const { error } = await res.json();
-      if (error) {
-        console.log("This is the error I get =>", error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText("Send Message");
+      const serviceID = process.env.SERVICE_ID;
+      const templateID = process.env.TEMPLATE_ID;
+      const publicKey = process.env.PUBLIC_KEY;
 
-        setFullname("");
-        setEmail("");
-        setMessage("");
-        setSubject("");
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText("Send");
-      // Reset form fields
-      setFullname("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
+      emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+        (result) => {
+          console.log(result.text);
+          console.log("email sent successfully");
+          setShowSuccessMessage(true);
+          setShowFailureMessage(false);
+          setButtonText("Send");
+          setFullname("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
+        },
+        (error) => {
+          console.log(error.text);
+          if (error) {
+            console.log("This is the error I get =>", error);
+            setShowSuccessMessage(false);
+            setShowFailureMessage(true);
+            setButtonText("Send Message");
+            setFullname("");
+            setEmail("");
+            setMessage("");
+            setSubject("");
+            return;
+          }
+        }
+      );
     }
   };
 
@@ -87,7 +87,7 @@ function Contact(props) {
     }
 
     setErrors({ ...tempErrors });
-    console.log("errors", errors);
+    console.log("valid form errors", errors);
     return isValid;
   };
 
@@ -98,17 +98,16 @@ function Contact(props) {
           Contact Me
         </h1>
         <div className="flex flex-col px-5 md:px-0 md:flex-row space-x-0 md:space-x-36">
-          <form onSubmit={handleSubmit} >
+          <form ref={form} onSubmit={sendEmail}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5">
               <input
                 type="text"
-                name="fullname"
+                name="from_name"
                 placeholder="Full Name"
                 value={fullname}
                 onChange={(e) => {
                   setFullname(e.target.value);
                 }}
-                required
                 className="border-2 rounded-lg bg-transparent border-b py-2 px-4 focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg"
               />
               {errors?.fullname && (
@@ -116,7 +115,7 @@ function Contact(props) {
               )}
               <input
                 type="text"
-                name="email"
+                name="user_email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => {
@@ -149,11 +148,11 @@ function Contact(props) {
                 type="text"
                 name="message"
                 placeholder="Message"
+                size="50"
                 value={message}
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
-                size="50"
                 required
                 className=" border-2 rounded-lg bg-transparent border-b pb-36  focus:outline-none focus:rounded-lg focus:ring-1 ring-[#57e0c3] font-normal text-gray-500 text-lg   indent-3"
               />
