@@ -39,7 +39,7 @@ function About(props) {
           crafting truly remarkable and practical tools along the way.
           <br />
           <br />
-          Here's my resume for more details about my experience.
+          Checking to see if site gets updated
         </p>
 
         <div className="pt-8">
