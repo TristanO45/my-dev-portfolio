@@ -39,7 +39,7 @@ function About(props) {
           crafting truly remarkable and practical tools along the way.
           <br />
           <br />
-          Checking to see if site gets updated
+          Making another update for a test
         </p>
 
         <div className="pt-8">
