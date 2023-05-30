@@ -19,24 +19,15 @@ function About(props) {
         </h1>
         <p className="text-white text-lg sm:text-xl px-6 pt-8  md:w-[75%]">
           I've always been the self-proclaimed tech geek amongst my peers and
-          family. Technology has always fascinated me, but my passion truly
-          ignited when I joined forces with my gaming buddies to develop 8-bit
-          games. My role? Using HTML and CSS to implement the Pokémon inspired
-          backgrounds and layouts that brought our games to life.
-          <br />
-          <br />
-          As I continued my journey to become a programming wizard, I had the
-          privilege of working alongside some truly talented engineers.
+          family. Throughout my journey to become a programming wizard, I've had
+          the privilege of working alongside some truly talented engineers.
           Together, we took on challenging projects that made me believe in my
           ability to make a meaningful impact on the world.
           <br />
           <br />
           When I'm not immersed in coding adventures, you'll find me exploring
           my artistic side. I have a deep love for photography, both film and
-          digital, and I enjoy capturing awe-inspiring moments with my drone. If
-          you're seeking a programmer with a touch of artistry, search no
-          further! I'm thrilled to continue learning and growing in this field,
-          crafting truly remarkable and practical tools along the way.
+          digital, and I enjoy capturing awe-inspiring moments with my drone.
           <br />
           <br />
           Download my resume to learn more about my experience.
@@ -56,7 +47,7 @@ function About(props) {
             </button>
           </a>
         </div>
-        <dev className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 justify-items-center gap-y-4 mt-20 ">
+        <dev className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 justify-items-center gap-y-4 mt-20 ">
           {techStack.map((link, index) => {
             const { icon, text, url } = link;
             return (

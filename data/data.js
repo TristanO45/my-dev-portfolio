@@ -93,7 +93,7 @@ const projectCards = [
   },
   {
     title: "ParQ",
-    desc: "A service for hosting/booking parking spaced",
+    desc: "A service for hosting/booking parking spaces",
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Jest, MongoDB, Google Maps API",
     gitHubUrl: {
