@@ -7,7 +7,7 @@ function Homepage() {
       <Head>
         <title>Tristan Onfroy</title>
         <meta name="description" content="Manually created Nextjs App" />
-        <link rel="icon" href="/logoShape.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
     </>
   );

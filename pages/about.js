@@ -21,7 +21,7 @@ function About(props) {
           I've always been the self-proclaimed tech geek amongst my peers and
           family. Technology has always fascinated me, but my passion truly
           ignited when I joined forces with my gaming buddies to develop 8-bit
-          games. My role? Designing breathtaking backgrounds and layouts that
+          games. My role? Designing the Pokémon inspired backgrounds and layouts that
           brought our games to life.
           <br />
           <br />
@@ -39,7 +39,7 @@ function About(props) {
           crafting truly remarkable and practical tools along the way.
           <br />
           <br />
-          Tuesday morning test
+          Download my resume to learn more about my experience!
         </p>
 
         <div className="pt-8">
