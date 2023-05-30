@@ -39,7 +39,7 @@ function About(props) {
           crafting truly remarkable and practical tools along the way.
           <br />
           <br />
-          This is my last test for the night
+          Tuesday morning test
         </p>
 
         <div className="pt-8">
