@@ -14,7 +14,7 @@ export default function SideNavbar() {
   const [colorChange, setColorChange] = useState("Home");
   return (
     <div className="hidden lg:block">
-      <aside className="flex flex-col px-4 w-[175px] h-screen fixed  justify-between bg-[#141515]">
+      <aside className="flex flex-col px-4 w-[175px] h-screen fixed  justify-between bg-[#1c1d1d]">
         <div className="w-auto">
           <Image
             src={"/PortfolioHS.jpg"}

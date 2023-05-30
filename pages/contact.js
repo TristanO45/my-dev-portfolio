@@ -186,7 +186,7 @@ function Contact(props) {
               )}
             </div>
           </form>
-          <div className="flex justify-center md:block ml-2 md:justify-end pt-8 md:pt-0 ">
+          <div className="flex justify-center md:block ml-2 md:justify-end pt-8 md:pt-0">
             <img
               src="/ContactMePic.png"
               alt="contact pic"
