@@ -97,7 +97,7 @@ const projectCards = [
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Jest, MongoDB, Google Maps API",
     gitHubUrl: {
-      url: "https://github.com/GoblinShark-Scratch-Project/parq",
+      url: "https://github.com/TristanO45/parq",
       icon: <SiGithub size="2rem" />,
     },
     website: {
@@ -112,7 +112,7 @@ const projectCards = [
     stack:
       "Javascript, React, CSS, MUI, Node, Express, Cypress.io, PostgreSQL, Stripe API",
     gitHubUrl: {
-      url: "https://github.com/Animaniacs-PTRI7/Iteration-project-animaniacs",
+      url: "https://github.com/TristanO45/HomeGrub",
       icon: <SiGithub size="2rem" />,
     },
     website: {
