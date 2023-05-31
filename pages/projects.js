@@ -24,7 +24,7 @@ function Projects(props) {
               return (
                 <div
                   key={index}
-                  className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
+                  className="group relative items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
                 >
                   <div className="object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125">
                     <Image
@@ -40,7 +40,7 @@ function Projects(props) {
                       <h1 className="text-xl sm:text-3xl md:text-3xl lg:text-4xl text-[#57e0c3] font-bold tracking-wider mt-8 sm:mt- pb-2">
                         {title}
                       </h1>
-                      <div className="text-[#57e0c3] pl-3 flex flex-col  space-y-3 absolute">
+                      <div className="text-[#57e0c3] pl-3 flex flex-col  space-y-3 absolute cursor-pointer">
                         <a
                           href={gitHubUrl.url}
                           target="_blank"

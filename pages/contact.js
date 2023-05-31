@@ -97,7 +97,7 @@ function Contact(props) {
         <h1 className="pb-[2rem] text-3xl sm:text-4xl md:text-6xl text-[#57e0c3] font-serifFont">
           Contact Me
         </h1>
-        <p>Lets connect!</p>
+        <p className="text-white">Lets connect!</p>
         <div className="flex flex-col px-5 md:px-0 md:flex-row space-x-0 md:space-x-36">
           <form ref={form} onSubmit={sendEmail}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5">
