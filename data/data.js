@@ -122,6 +122,20 @@ const projectCards = [
     imgUrl: "/HomeGrub.png",
   },
   {
+    title: "Memoire Lane",
+    desc: "A site to share your cherished memories.",
+    stack: "Javascript, React, Redux, Node, Express, Jest, MongoDB, CSS, MUI,",
+    gitHubUrl: {
+      url: "https://github.com/TristanO45/MemoriesApp",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "",
+      icon: "",
+    },
+    imgUrl: "/MemoireLaneApp.png",
+  },
+  {
     title: "MeetMe",
     desc: "Application for joining and creating meetups",
     stack: "Javascript, React, CSS, Node, Express, SQL",
