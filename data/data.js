@@ -149,6 +149,20 @@ const projectCards = [
     },
     imgUrl: "/MeetMe.png",
   },
+  {
+    title: "GigHunt",
+    desc: "Mobile App for finding jobs near you",
+    stack: "React Native, Javascript, CSS, RapidAPI ",
+    gitHubUrl: {
+      url: "https://github.com/TristanO45/GigHunt",
+      icon: <SiGithub size="2rem" />,
+    },
+    website: {
+      url: "https://expo.dev/@tonfroy/react-native-jobs-app?serviceType=classic&distribution=expo-go",
+      icon: <TbWorld size="2rem" />,
+    },
+    imgUrl: "/React-Native-Job-App.png",
+  },
 ];
 
 // Tech Stack icons
